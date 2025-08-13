@@ -1,0 +1,17 @@
+C:\Code\CursorDemo\book-api\src\main\java\com\example\bookapi\config\OpenApiConfig.java
+C:\Code\CursorDemo\book-api\src\main\java\com\example\bookapi\dto\BookUpdateRequest.java
+C:\Code\CursorDemo\book-api\src\main\java\com\example\bookapi\controller\BookController.java
+C:\Code\CursorDemo\book-api\src\main\java\com\example\bookapi\dto\BookResponse.java
+C:\Code\CursorDemo\book-api\src\main\java\com\example\bookapi\dto\BookCreateRequest.java
+C:\Code\CursorDemo\book-api\src\main\java\com\example\bookapi\exception\BadRequestException.java
+C:\Code\CursorDemo\book-api\src\main\java\com\example\bookapi\exception\ResourceNotFoundException.java
+C:\Code\CursorDemo\book-api\src\main\java\com\example\bookapi\repository\BookRepository.java
+C:\Code\CursorDemo\book-api\src\main\java\com\example\bookapi\service\BookService.java
+C:\Code\CursorDemo\book-api\src\main\java\com\example\bookapi\util\CorrelationIdFilter.java
+C:\Code\CursorDemo\book-api\src\main\java\com\example\bookapi\BookApiApplication.java
+C:\Code\CursorDemo\book-api\src\main\java\com\example\bookapi\entity\Book.java
+C:\Code\CursorDemo\book-api\src\main\java\com\example\bookapi\exception\GlobalExceptionHandler.java
+C:\Code\CursorDemo\book-api\src\main\java\com\example\bookapi\exception\FieldValidationError.java
+C:\Code\CursorDemo\book-api\src\main\java\com\example\bookapi\service\BookServiceImpl.java
+C:\Code\CursorDemo\book-api\src\main\java\com\example\bookapi\security\SecurityConfig.java
+C:\Code\CursorDemo\book-api\src\main\java\com\example\bookapi\exception\ApiError.java

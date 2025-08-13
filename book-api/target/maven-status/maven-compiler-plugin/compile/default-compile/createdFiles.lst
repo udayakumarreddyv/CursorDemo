@@ -1,0 +1,17 @@
+com\example\bookapi\config\OpenApiConfig.class
+com\example\bookapi\BookApiApplication.class
+com\example\bookapi\dto\BookResponse.class
+com\example\bookapi\repository\BookRepository.class
+com\example\bookapi\exception\BadRequestException.class
+com\example\bookapi\dto\BookUpdateRequest.class
+com\example\bookapi\service\BookServiceImpl.class
+com\example\bookapi\util\CorrelationIdFilter.class
+com\example\bookapi\dto\BookCreateRequest.class
+com\example\bookapi\exception\ResourceNotFoundException.class
+com\example\bookapi\service\BookService.class
+com\example\bookapi\exception\GlobalExceptionHandler.class
+com\example\bookapi\exception\ApiError.class
+com\example\bookapi\controller\BookController.class
+com\example\bookapi\entity\Book.class
+com\example\bookapi\exception\FieldValidationError.class
+com\example\bookapi\security\SecurityConfig.class
