@@ -1,0 +1,135 @@
+# Spring Boot API Development Rules and Standards
+
+## Architecture Style
+- **Layered Architecture**: Controller → Service → Repository → Entity
+- **Package Structure**: 
+  - `com.cursordemo.api.controller` - REST controllers
+  - `com.cursordemo.api.service` - Business logic
+  - `com.cursordemo.api.repository` - Data access layer
+  - `com.cursordemo.api.entity` - JPA entities
+  - `com.cursordemo.api.dto` - Data Transfer Objects
+  - `com.cursordemo.api.exception` - Custom exceptions
+  - `com.cursordemo.api.config` - Configuration classes
+  - `com.cursordemo.api.security` - Security configuration
+
+## Naming Conventions
+- **Classes**: PascalCase (e.g., `BookController`, `BookService`)
+- **Methods**: camelCase (e.g., `getBookById`, `createBook`)
+- **Variables**: camelCase (e.g., `bookTitle`, `authorName`)
+- **Constants**: UPPER_SNAKE_CASE (e.g., `MAX_BOOKS_PER_PAGE`)
+- **Packages**: lowercase (e.g., `com.cursordemo.api.controller`)
+- **Database Tables**: lowercase with underscores (e.g., `book`, `book_author`)
+
+## Technology Stack
+- **Java Version**: 17
+- **Spring Boot Version**: 3.2.0
+- **Database**: H2 (in-memory for development)
+- **Build Tool**: Maven
+- **Authentication**: Basic Auth with Spring Security
+- **Documentation**: Swagger/OpenAPI 3
+- **Validation**: Bean Validation (JSR-303)
+- **Testing**: JUnit 5 + Mockito
+
+## Folder Structure
+```
+src/
+├── main/
+│   ├── java/
+│   │   └── com/
+│   │       └── cursordemo/
+│   │           └── api/
+│   │               ├── CursorDemoApplication.java
+│   │               ├── controller/
+│   │               ├── service/
+│   │               ├── repository/
+│   │               ├── entity/
+│   │               ├── dto/
+│   │               ├── exception/
+│   │               ├── config/
+│   │               └── security/
+│   └── resources/
+│       ├── application.yml
+│       ├── data.sql
+│       └── schema.sql
+└── test/
+    └── java/
+        └── com/
+            └── cursordemo/
+                └── api/
+                    ├── controller/
+                    ├── service/
+                    └── repository/
+```
+
+## Dependency Management Rules
+- Use Maven for dependency management
+- Specify exact versions in `pom.xml`
+- Group dependencies logically (Spring Boot, Database, Security, Documentation, Testing)
+- Use Spring Boot BOM for version management
+
+## Error Handling Standards
+- Create custom exceptions extending `RuntimeException`
+- Implement global exception handler using `@ControllerAdvice`
+- Return consistent error response format
+- Use appropriate HTTP status codes
+- Log errors with proper context
+
+## Validation Rules
+- Use Bean Validation annotations on DTOs
+- Validate all input parameters
+- Create custom validators when needed
+- Return validation errors in consistent format
+
+## Logging Standards
+- Use SLF4J with Logback
+- Log at appropriate levels (DEBUG, INFO, WARN, ERROR)
+- Include correlation IDs for request tracing
+- Log method entry/exit for debugging
+- Avoid logging sensitive information
+
+## Testing Strategy
+- Unit tests for all service methods
+- Integration tests for controllers
+- Repository tests with test data
+- Use `@SpringBootTest` for integration tests
+- Mock external dependencies
+- Achieve minimum 80% code coverage
+
+## Documentation Approach
+- Use Swagger/OpenAPI 3 annotations
+- Document all REST endpoints
+- Include request/response examples
+- Document error codes and messages
+- Keep README.md updated with setup instructions
+
+## Code Quality Standards
+- Follow SOLID principles
+- Use meaningful variable and method names
+- Keep methods small and focused
+- Add comprehensive comments for complex logic
+- Use consistent formatting
+- Implement proper null checks
+- Use Optional for nullable returns
+
+## Security Standards
+- Implement Basic Authentication
+- Use HTTPS in production
+- Validate all inputs
+- Implement proper CORS configuration
+- Use secure headers
+- Log security events
+
+## Performance Standards
+- Use pagination for large datasets
+- Implement caching where appropriate
+- Optimize database queries
+- Use connection pooling
+- Monitor response times
+
+## API Design Standards
+- Use RESTful conventions
+- Return appropriate HTTP status codes
+- Use consistent response formats
+- Implement proper versioning strategy
+- Use meaningful endpoint names
+- Support filtering, sorting, and pagination
